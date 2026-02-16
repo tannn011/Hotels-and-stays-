@@ -1946,8 +1946,7 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item fade-in">
-                    <img src="11.jpg" alt="Gallery Image 1">
-                    <div class="gallery-overlay">
+                    <img src="11.jpg" alt="Gallery Image 1" onclick="openGallery(this.src)">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
@@ -2538,13 +2537,9 @@
         // ============================================
         // GALLERY LIGHTBOX (SIMPLE VERSION)
         // ============================================
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        galleryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Simple alert - can be replaced with a proper lightbox
-                alert('Image gallery feature - In a production site, this would open a full-screen image viewer');
-            });
-        });
+        function openGallery(imgSrc) {
+    window.open(imgSrc, "_blank");
+        }
 
         // ============================================
         // FORM VALIDATION ENHANCEMENT
